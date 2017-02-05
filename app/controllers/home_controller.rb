@@ -6,5 +6,9 @@ class HomeController < ApplicationController
   end
 
   def add_process
-  end
+		n = Number.new
+		n.name = params[:phone_user]
+		n.phone_number = params[:phone_number]
+		n.save
+	end
 end
